@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building java source code ..'
+                echo 'Building java source code webhook ..'
 		sh '''javac jenkins.java
 		java jenkins
 		'''
@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing java source code'
+                echo 'Testing java source code webhook'
             }
         }
         stage('package') {
@@ -22,7 +22,7 @@ pipeline {
         }
 	stage('deploy') {
 		steps {
-			echo 'Deploying java package....'
+			echo 'Deploying java package webhook....'
 		}
             }
         }
